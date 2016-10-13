@@ -1,4 +1,4 @@
-
+typedef long long LL;
 LL a[N], r[N], n;
 void exgcd(LL a, LL b, LL &d, LL &x, LL &y) {
 	if (!b) {d = a; x = 1; y = 0;}

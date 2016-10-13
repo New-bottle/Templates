@@ -1,0 +1,98 @@
+%文档类型
+\documentclass[a4paper]{article}
+
+%引用包裹
+\usepackage{bm}
+\usepackage{cmap}
+\usepackage{ctex}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{float}
+\usepackage{xeCJK}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{indentfirst}
+\usepackage[cache=false]{minted}
+
+%代码高亮
+\geometry{margin=1in}
+
+%字体设置
+%\setmainfont{PingFangSC-Light}
+%\setCJKmonofont{PingFangSC-Light}
+%\setCJKmainfont[BoldFont={PingFangSC-Regular}]{PingFangSC-Light}
+
+\newcommand{\cppcode}[1]{
+    \inputminted[mathescape]{cpp}{source/#1}
+}
+
+\newcommand{\javacode}[1]{
+    \inputminted[mathescape]{java}{source/#1}
+}
+
+\title{代码库}
+\author{上海交通大学}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\section{数论}
+	\subsection{中国剩余定理}
+		\cppcode{maths/CRT.cpp}
+	
+	\subsection{FFT}
+		\cppcode{maths/FFT.cpp}
+	
+	\subsection{组合数学（卢卡斯定理、线性筛逆元）}
+		\cppcode{maths/Combination.cpp}
+	
+	\subsection{辛普森自适应积分}
+		\cppcode{maths/simpson.cpp}
+	
+	\subsection{线性筛}
+		\cppcode{maths/linearsieve.cpp}
+\section{图论}
+	\subsection{Tarjan}
+		\cppcode{graph/tarjan.cpp}
+
+	\subsection{最大流}
+		\cppcode{graph/dinic.cpp}
+
+	\subsection{最小费用流}
+		\cppcode{graph/mincostflow.cpp}
+\section{数据结构}
+	\subsection{K-D树}
+		\cppcode{data_structure/KDTree.cpp}
+
+	\subsection{可持久化Trie}
+		\cppcode{data_structure/persistant-trie.cpp}	
+
+	\subsection{Link-Cut-Tree}
+		\cppcode{data_structure/LCT.cpp}
+
+	\subsection{可持久化线段树}
+		\cppcode{data_structure/persistant-segtree.cpp}
+
+\section{字符串}
+	\subsection{AC自动机}
+		\cppcode{strings/ACautomaton.cpp}
+
+	\subsection{后缀数组}
+		\cppcode{strings/suffixarray.cpp}
+
+	\subsection{回文自动机}
+		\cppcode{strings/PAM.cpp}
+	
+	\subsection{Manacher算法}
+		\cppcode{strings/manacher.cpp}
+\end{document}

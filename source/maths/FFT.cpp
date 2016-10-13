@@ -3,7 +3,8 @@ struct comp {
 	comp(double r = 0.0, double i = 0.0) : r(r), i(i) {}
 	comp operator + (const comp &b) const {return comp(r + b.r, i + b.i);}
 	comp operator - (const comp &b) const {return comp(r - b.r, i - b.i);}
-	comp operator * (const comp &b) const {return comp(r * b.r - i * b.i, r * b.i + i * b.r);}
+	comp operator * (const comp &b) const 
+		{return comp(r * b.r - i * b.i, r * b.i + i * b.r);}
 }a[N], b[N], c[N];
 void FFT(comp *a, int n, int type) {
 	for(int i = 1; j = 0; i < n - 1; i ++) {
