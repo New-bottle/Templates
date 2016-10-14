@@ -27,12 +27,17 @@
 %\setCJKmonofont{PingFangSC-Light}
 %\setCJKmainfont[BoldFont={PingFangSC-Regular}]{PingFangSC-Light}
 
+
 \newcommand{\cppcode}[1]{
-    \inputminted[mathescape]{cpp}{source/#1}
+    \inputminted[mathescape,
+    			tabsize=2
+    			]{cpp}{source/#1}
 }
 
 \newcommand{\javacode}[1]{
-    \inputminted[mathescape]{java}{source/#1}
+    \inputminted[mathescape,
+    			tabsize=2
+    			]{java}{source/#1}
 }
 
 \title{代码库}
@@ -46,19 +51,20 @@
 \tableofcontents
 
 \clearpage
+
 \section{数论}
 	\subsection{中国剩余定理}
 		\cppcode{maths/CRT.cpp}
-	
+
 	\subsection{FFT}
 		\cppcode{maths/FFT.cpp}
-	
+
 	\subsection{组合数学（卢卡斯定理、线性筛逆元）}
 		\cppcode{maths/Combination.cpp}
-	
+
 	\subsection{辛普森自适应积分}
 		\cppcode{maths/simpson.cpp}
-	
+
 	\subsection{线性筛}
 		\cppcode{maths/linearsieve.cpp}
 \section{图论}
@@ -75,7 +81,7 @@
 		\cppcode{data_structure/KDTree.cpp}
 
 	\subsection{可持久化Trie}
-		\cppcode{data_structure/persistant-trie.cpp}	
+		\cppcode{data_structure/persistant-trie.cpp}
 
 	\subsection{Link-Cut-Tree}
 		\cppcode{data_structure/LCT.cpp}
@@ -92,7 +98,7 @@
 
 	\subsection{回文自动机}
 		\cppcode{strings/PAM.cpp}
-	
+
 	\subsection{Manacher算法}
 		\cppcode{strings/manacher.cpp}
 \end{document}
