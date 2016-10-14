@@ -1,6 +1,9 @@
+*.out
+
 *~
 
 *.swp
+
 *.aux
 *.toc
 *.log
